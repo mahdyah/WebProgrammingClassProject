@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Enabled",
+                "ssl": {}
+            },
+            "previewLimit": 50,
+            "server": "homecaredb.clcchrd8h5vh.us-east-2.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "homecare",
+            "database": "homecaredb",
+            "username": "admin",
+            "password": "Myhomecare57!",
+            "connectionTimeout": 50
+        }
+    ]
+}
