@@ -2,10 +2,10 @@ const mysql = require('mysql');
 
 
  const db = mysql.createConnection({
-  host:'homecaredb.clcchrd8h5vh.us-east-2.rds.amazonaws.com',
-    user:'admin',
-    password:'Myhomecare57!',
-    database:'homecaredb'
+  host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password:process.env.DB_PASSWORD,
+    database: process.env.DB,
 })
 
 module.exports = {db}
