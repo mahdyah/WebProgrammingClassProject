@@ -26,7 +26,8 @@ console.log("this is the data" , data)
     db.query(q, [values], (err, data)=> {
         if(err) return res.json(err);
         console.log("this is the values" , values)
-        return res.status(200).json("User has been created successfully")
+       return res.status(200).json("User has been created successfully")
+        // return "User created"
     })
   })
 
