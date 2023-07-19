@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Careers from "./pages/Careers";
 import TestimonialSlider from "./pages/TestimonialSlider"
 import './style.scss'
+const path= require('path')
 
 const Layout = () => {
   return(
@@ -35,10 +36,7 @@ const router = createBrowserRouter([
       {
           path: "/",
           element: (<Home/>)
-      },  {
-        path: "/contact",
-        element: (<Contact/>),
-      },
+      }, 
       {
         path: "/testimony",
         element: (<TestimonialSlider/>),
@@ -73,8 +71,13 @@ const router = createBrowserRouter([
     path: "/login",
     element: (<Login/>),
   },
-
+  {
+    path: "/contact",
+    element: (<Contact/>),
+  },
 ]);
+
+
 
 function App() {
   return (

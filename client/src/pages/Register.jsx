@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { registerUser } from '../services/Register'
-
+import picture from '../Assets/old-man.png';
 const Register = () => {
   
   const [inputs, setInputs] = useState({
@@ -31,8 +31,10 @@ const Register = () => {
 
   return (
     <div className='loginDiv'>
-    <h1>Register</h1>
+    <div className='box'> <img src={picture} alt="senior-woman" /></div>
+      <div className='box' > 
     <form>
+    <h1>Register</h1>
       <input required type='text' placeholder='username' name='username' onChange={handleChange}/>
       <input required type='email' placeholder='email' name='email' onChange={handleChange}/>
       <input required type='password' placeholder='password' name='password' onChange={handleChange}/>
@@ -41,7 +43,7 @@ const Register = () => {
       <span>Already Have an Account ? <Link to='/login'>Login</Link></span>
     </form>
 
-
+    </div>
   </div>
   )
 }

@@ -46,6 +46,6 @@ app.use("/api/auth" , authRoute);
 app.use("/api/contact" , userRoute)
  
 
-app.listen(8800, () => {
+app.listen(5001, () => {
     console.log("Server is Running")
 })

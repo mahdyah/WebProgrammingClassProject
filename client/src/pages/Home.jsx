@@ -13,17 +13,18 @@ const Home = () => {
 const myStyle={
   
   backgroundImage:`url(${nurse})`,
-  Width:'100%',
-  Height:'100%',
+  Width:'100vw',
+  Height:'100vh',
   position:'relative',
-   backgroundSize:'cover',
+   backgroundSize:'100% 100%',
+   backgroundRepeat:'no-repeat',
   //  backgroundPosition:'center',
   // padding:'10%',
   marginTop:'0',
 }
 
   
- const [activeButton, setActiveButton] = useState(['button1','button2','button3','button4','button5','button6','button7','button8']);
+ const [activeButton, setActiveButton] = useState("0");
 
  const handleButtonClick = (buttonName) => {
    setActiveButton(buttonName);
@@ -112,16 +113,15 @@ const myStyle={
 
 {/* Starts Here */}
 <div className="page4">
+  <div className='title4'><h5>Frequently Asked uestions</h5></div>
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
         <Accordion.Header>
-        <div className='question'>
+        {/* <div className='question'> */}
           <p>Who pays for home health?</p>
-        <img id='right' className={activeButton === 'button1' ? 'active' : 'notActive'}
-        onClick={() => handleButtonClick('button1')} src={right} alt="" />
-        <img id='down' className={activeButton === 'button2' ? 'active' : 'notActive'}
-        onClick={() => handleButtonClick('button2')} src={down} alt="" />
-        </div>
+        <img id='right' className={activeButton === 'button1' ? 'active' : 'notActive'} onClick={() => handleButtonClick('button1')} src={right} alt="" />
+        <img id='down' className={activeButton === 'button2' ? 'notActive' : 'active'} onClick={() => handleButtonClick('button2')} src={down} alt="" />
+        {/* </div> */}
         </Accordion.Header>
         <Accordion.Body>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -140,7 +140,7 @@ const myStyle={
   <p >How much does home health cost? </p> 
   <img id='right' className={activeButton === 'button3' ? 'active' : 'notActive'}
         onClick={() => handleButtonClick('button3')} src={right} alt=""  />
-   <img id='down' className={activeButton === 'button4' ? 'active' : 'notActive'}
+   <img id='down' className={activeButton === 'button4' ? 'notActive' : 'active'}
         onClick={() => handleButtonClick('button4')} src={down} alt="" />
 </div>
         </Accordion.Header>
@@ -161,9 +161,9 @@ const myStyle={
         <Accordion.Header>        
 <div className='question'>
   <p>How are caregivers selected? </p> 
-  <img id='right' className={activeButton === 'button5' ? 'active' : ''}
+  <img id='right' className={activeButton === 'button5' ? 'active' : 'notActive'}
         onClick={() => handleButtonClick('button5')} src={right} alt=""  />
-   <img id='down' className={activeButton === 'button6' ? 'active' : 'notActive'}
+   <img id='down' className={activeButton === 'button6' ? 'notActive' : 'active'}
         onClick={() => handleButtonClick('button6')} src={down} alt="" />
 </div>
         </Accordion.Header>
@@ -185,7 +185,7 @@ const myStyle={
   <p >How quickly can I arrange for service? </p> 
   <img id='right' className={activeButton === 'button7' ? 'active' : 'notActive'}
         onClick={() => handleButtonClick('button7')} src={right} alt=""  />
-   <img id='down' className={activeButton === 'button8' ? 'active' : 'notActive'}
+   <img id='down' className={activeButton === 'button8' ? 'notActive' : 'active'}
         onClick={() => handleButtonClick('button8')} src={down} alt="" />
 </div>
         </Accordion.Header>

@@ -8,6 +8,9 @@ import { useLocation } from "react-router-dom";
 const Navbar = () => {
 const navRef=useRef();
   const {logout , currentUser} = useContext(AuthContext);
+
+
+  
 const showNavbar=() =>{
   navRef.current.classList.toggle('responssive_nav')
 }
